@@ -10,15 +10,54 @@ AUTOCALCMATH_FLOAT FindPercentage(AUTOCALCMATH_FLOAT Subject, AUTOCALCMATH_FLOAT
 
 	AUTOCALCMATH_FLOAT Dec = Subject / NumOf;
 
-	AUTOCALCMATH_FLOAT Result = Dec * 100;
+	Result = Dec * 100;
 
 	return Result;
 }
 
-AUTOCALCMATH_FLOAT AddPercentage(AUTOCALCMATH_FLOAT BaseNum, AUTOCALCMATH_FLOAT Percentage);
+AUTOCALCMATH_FLOAT AddPercentage(AUTOCALCMATH_FLOAT BaseNum, AUTOCALCMATH_FLOAT Percentage)
+{
+	AUTOCALCMATH_FLOAT Result;
 
-AUTOCALCMATH_FLOAT SubPercentage(AUTOCALCMATH_FLOAT BaseNum, AUTOCALCMATH_FLOAT Percentage);
+	AUTOCALCMATH_FLOAT FindPercentDec = Percentage / 100;
 
-AUTOCALCMATH_FLOAT MultiPercentage(AUTOCALCMATH_FLOAT BaseNum, AUTOCALCMATH_FLOAT Percentage);
+	Result = BaseNum / FindPercentDec;
 
-AUTOCALCMATH_FLOAT DivPercentage(AUTOCALCMATH_FLOAT BaseNum, AUTOCALCMATH_FLOAT Percentage);
+	return Result;
+}
+
+AUTOCALCMATH_FLOAT SubPercentage(AUTOCALCMATH_FLOAT BaseNum, AUTOCALCMATH_FLOAT Percentage)
+{
+        AUTOCALCMATH_FLOAT Result;
+
+        AUTOCALCMATH_FLOAT FindPercentDec = Percentage / 100;
+
+        Result = BaseNum * FindPercentDec;
+
+        return Result;
+}
+
+
+AUTOCALCMATH_FLOAT MultiPercentage(AUTOCALCMATH_FLOAT BaseNum, AUTOCALCMATH_FLOAT Percentage)
+{
+        AUTOCALCMATH_FLOAT Result;
+
+	AUTOCALCMATH_FLOAT FindDigi = BaseNum * Percentage;
+
+        Result = BaseNum * FindDigi;
+
+        return Result;
+}
+
+
+AUTOCALCMATH_FLOAT DivPercentage(AUTOCALCMATH_FLOAT BaseNum, AUTOCALCMATH_FLOAT Percentage)
+{
+        AUTOCALCMATH_FLOAT Result;
+
+        AUTOCALCMATH_FLOAT FindDigi = BaseNum * Percentage;
+
+        Result = BaseNum / FindDigi;
+
+        return Result;
+}
+
