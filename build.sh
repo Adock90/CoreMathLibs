@@ -74,4 +74,8 @@ echo "[AutoCalcMathBuildScript] Running: gcc -shared -o ../libs/AutoCalcMath.Pow
 $(gcc -shared -o ../libs/AutoCalcMath.Powers.so -fPIC AutoCalcMath.Powers.c)
 
 echo "[AutoCalcMathBuildScript] Done Compiling"
+echo "[AutoCalcMathBuildScript] Removing leftovers"
+
+$(rm "../libs/AutoCalcMath.TrigonomitryX86.o")
+
 exit
